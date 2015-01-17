@@ -8,7 +8,7 @@ A json file will be returned with a total count for each file format.
 ```
 
 ### Running from the server
-##### npm install the package
+##### npm install the package and open the command line
 ```javascript
-	> npm link
+	> npm start
 ```
