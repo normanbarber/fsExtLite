@@ -11,7 +11,7 @@ var fsmodule = {
 		var promise = null;
 		var self = this;
 		var files = this.filepaths.splice(0, 20);  // prevents memory allocation error. comment this line to see error when reading C:/ drive or another folder with a lot of files
-//        var files = this.filepaths;  // uncomment this line to see error
+		//  var files = this.filepaths;  // uncomment this line to see error
 		_.each(files,function(filepath){
 			var fileformat = path.extname(filepath);
 			var year;
@@ -42,8 +42,8 @@ var fsmodule = {
 			.then(function(promises) {
 				return Q(_.map(promises, Q.nearer));
 			})
+			// IMPORTANT : if you comment the splice() to see the memory allocation error you will need to comment this fin too
 			.fin(function(){
-				// IMPORTANT : if you comment the splice() to see the memory allocation error you will need to comment this fin too
 				if(self.filepaths.length > 0){
 					return Q(fsmodule.getStats());
 				}
