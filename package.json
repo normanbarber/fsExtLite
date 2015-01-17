@@ -1,0 +1,16 @@
+{
+	"name": "fsExtLite",
+	"version": "0.0.1",
+	"description": "finding the total count for file formats in a folder and subfolders recursive",
+	"private": true,
+	"scripts": {
+		"start": "node server.js"
+	},
+	"dependencies": {
+		"express": "4.10.6",
+		"lodash-node": "*",
+		"q": "*",
+		"walkdir": "*",
+		"commander": "*"
+	}
+}
