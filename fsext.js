@@ -56,7 +56,6 @@ module.exports = function(readfilepaths) {
 			})
 			.then(function(data) {
 				console.log(JSON.stringify(data[0].value));
-				return Q;
 			});
 	}
 };
